@@ -21,7 +21,6 @@ class SessionsController < ApplicationController
       flash[:danger] = 'Incorrect email or password. Please try again.'
       ###########################################
     
-
       #otherwise, redirect back to the login form page to try again.
       redirect_to new_session_path
     end
