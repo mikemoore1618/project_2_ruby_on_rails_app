@@ -1,3 +1,9 @@
 Rails.application.routes.draw do
-  root "pages#home"
+  root 'posts#index'
+  resources :users
+  resources :posts
+
+  resources :sessions, only: [:new, :create]
+  delete '/logout' => 'sessions#destroy', as: :logout
 end
+

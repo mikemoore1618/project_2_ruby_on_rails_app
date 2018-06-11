@@ -1,0 +1,10 @@
+
+<ul>
+  <% for p in @posts do %>
+    
+    <li><%= link_to(p.caption, post_path(p)) %></li>
+    <li><%= link_to(p.audio.html_safe, posts_path(p)) %></li>
+
+  <% end %>
+</ul>
+
