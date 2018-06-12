@@ -2,10 +2,9 @@
 <h1><%= @user.name %></h1>
 
 <ul>
-<% for  posts in current_user.posts %>
+<% for posts in current_user.posts %>
     <li><%= posts.audio.html_safe %></li>
     <li><%= posts.caption%></li>
+   
 <% end %>
 </ul>
-
-<%= link_to "Delete Account", user_path(current_user.id), method: 'delete' %>

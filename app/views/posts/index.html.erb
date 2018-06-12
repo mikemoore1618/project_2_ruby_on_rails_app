@@ -1,10 +1,12 @@
 
 <ul>
-  <% for p in @posts do %>
+  <% for p in @posts.reverse do %>
+    <li><%= link_to(p.user.name, user_path(p.user.id))%> <%=time_ago_in_words p.created_at %> ago</li>
     
-    <li><%= link_to(p.caption, post_path(p)) %></li>
     <li><%= link_to(p.audio.html_safe, posts_path(p)) %></li>
+    <li><%= link_to(p.caption, post_path(p)) %></li>
 
+    <li><%= link_to "Edit", edit_post_path(p) %> <%= link_to "Delete", post_path(p), method: "delete" %></li>
   <% end %>
 </ul>
 
