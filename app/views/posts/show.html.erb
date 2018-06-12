@@ -1,4 +1,6 @@
-<ul>
+
+
+<ul class="list-unstyled">
     <li><%= link_to(@post.user.name, user_path(@post.user.id))%> <%=time_ago_in_words @post.created_at %> ago</li>
     <li><%= link_to(@post.audio.html_safe, posts_path(@post)) %></li>
     <li><%= link_to(@post.caption, post_path(@post)) %></li>

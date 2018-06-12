@@ -1,12 +1,30 @@
 
-<ul>
+
+
+<div class="dropdown float-right">
+
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Sort by
+  </button>
+  <div class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuButton">
+    <a class ="dropdown-item text-white" href="#">Date</a>
+    <a class="dropdown-item text-white" href="#">Likes</a>
+    <a class="dropdown-item text-white" href="#">Genre</a>
+  </div>
+
+</div>
+
+<div class="row">
+<div class="col-md-4">
+<ul class="list-unstyled">
   <% for p in @posts.reverse do %>
     <li><%= link_to(p.user.name, user_path(p.user.id))%> <%=time_ago_in_words p.created_at %> ago</li>
     
     <li><%= link_to(p.audio.html_safe, posts_path(p)) %></li>
     <li><%= link_to(p.caption, post_path(p)) %></li>
-
-    <li><%= link_to "Edit", edit_post_path(p) %> <%= link_to "Delete", post_path(p), method: "delete" %></li>
+    
   <% end %>
 </ul>
+</div>
+</div>
 
