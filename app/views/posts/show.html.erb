@@ -1,14 +1,14 @@
 
-
+<div class="posts-show">
 <ul class="list-unstyled">
-<h1>BOOOOM!</h1>
-    <li><%= link_to(@post.user.name, post_path(@post.user.id))%> <%=time_ago_in_words @post.created_at %> ago</li>
-    <li><%= @post.audio.html_safe %></li>
-    <li class="green"><%= @post.caption %></li>
+    <h4><%= link_to(@post.user.name, user_path(@post.user.id))%></h4> <p><%=time_ago_in_words @post.created_at %> ago</p>
+    <p><%= @post.audio.html_safe %></p>
+    <p><%= @post.caption %></p>
 
     <% if current_user == @user %>
 
-    <li> <%= link_to "Edit", edit_post_path(@post) %> <%= link_to "Delete", post_path(@post), method: "delete" %></li>
+    <p><%= link_to "Edit", edit_post_path(@post) %> <%= link_to "Delete", post_path(@post), method: "delete" %></p>
 
     <% end %>
 </ul>
+</div>

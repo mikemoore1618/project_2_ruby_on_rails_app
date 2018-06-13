@@ -9,7 +9,6 @@ class PostsController < ApplicationController
   def show
     id = params[:id]
     @post =  Post.find(id)
-    # @post.user_id = current_user.id
   end
 
   def new

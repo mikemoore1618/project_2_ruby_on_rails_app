@@ -4,14 +4,14 @@
   <% @posts.reverse.in_groups_of(3).each_with_index do |row, i|  %>
 
     <div class="row mb-3">
-      <div class="col">
+      <div class="col-md-4">
       <h4><%= link_to(row[0].user.name, user_path(row[0].user.id))%></h4><p> <%=time_ago_in_words row[0].created_at %> ago</p>
         <%= row[0].audio.html_safe %>
       <h6><%= link_to(row[0].caption, post_path(row[0])) %></h6>
       </div>
 
       <% if row[1] %>
-      <div class="col">
+      <div class="col-md-4">
       <h4><%= link_to(row[1].user.name, user_path(row[1].user.id))%></h4><p> <%=time_ago_in_words row[1].created_at %> ago</p>
         <%= row[1].audio.html_safe %>
       <h6><%= link_to(row[1].caption, post_path(row[1])) %></h6>
@@ -19,7 +19,7 @@
       <% end %>
 
       <% if row[2] %>
-      <div class="col">
+      <div class="col-md-4">
       <h4><%= link_to(row[2].user.name, user_path(row[2].user.id))%></h4><p> <%=time_ago_in_words row[2].created_at %> ago</p>
       <%= row[2].audio.html_safe %>
       <h6><%= link_to(row[2].caption, post_path(row[2])) %></65>
