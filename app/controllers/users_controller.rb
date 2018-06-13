@@ -10,6 +10,8 @@ class UsersController < ApplicationController
   def show
     id = params[:id]
     @user =  User.find(id)
+    @posts = @user.posts.all
+   
   end
 
   def new

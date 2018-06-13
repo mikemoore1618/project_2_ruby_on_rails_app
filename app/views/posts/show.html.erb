@@ -1,8 +1,14 @@
 
 
 <ul class="list-unstyled">
-    <li><%= link_to(@post.user.name, user_path(@post.user.id))%> <%=time_ago_in_words @post.created_at %> ago</li>
-    <li><%= link_to(@post.audio.html_safe, posts_path(@post)) %></li>
-    <li><%= link_to(@post.caption, post_path(@post)) %></li>
-    <li><%= link_to "Edit", edit_post_path(@post) %> <%= link_to "Delete", post_path(@post), method: "delete" %></li>
+<h1>BOOOOM!</h1>
+    <li><%= link_to(@post.user.name, post_path(@post.user.id))%> <%=time_ago_in_words @post.created_at %> ago</li>
+    <li><%= @post.audio.html_safe %></li>
+    <li class="green"><%= @post.caption %></li>
+
+    <% if current_user == @user %>
+
+    <li> <%= link_to "Edit", edit_post_path(@post) %> <%= link_to "Delete", post_path(@post), method: "delete" %></li>
+
+    <% end %>
 </ul>

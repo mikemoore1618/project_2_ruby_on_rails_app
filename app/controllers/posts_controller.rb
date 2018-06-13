@@ -1,4 +1,7 @@
 class PostsController < ApplicationController
+
+  before_action :verify_user, only: [:edit, :update, :destroy]
+
   def index
     @posts = Post.all
   end
@@ -6,7 +9,7 @@ class PostsController < ApplicationController
   def show
     id = params[:id]
     @post =  Post.find(id)
-    @post.user_id = current_user.id
+    # @post.user_id = current_user.id
   end
 
   def new
@@ -43,5 +46,12 @@ class PostsController < ApplicationController
     session[:post_id] = nil
     redirect_to '/'
   end
+
+  def verify_user
+    #checks that the current logged in user is the same user who created the post
+     @post = Post.find(params[:id])
+     unless @post.user_id == current_user
+     end
+    end
 
 end
