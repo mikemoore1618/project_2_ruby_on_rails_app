@@ -1,14 +1,19 @@
+<h1><%= link_to(@post.user.name, user_path(@post.user.id))%></h1> 
 
-<div class="posts-show">
-<ul class="list-unstyled">
-    <h4><%= link_to(@post.user.name, user_path(@post.user.id))%></h4> <p><%=time_ago_in_words @post.created_at %> ago</p>
-    <p><%= @post.audio.html_safe %></p>
-    <p><%= @post.caption %></p>
+<div class="post-show">
+    <div class="card" style="width: 342px;">
+        <div class="card-body">
+            <p><%= @post.audio.html_safe %></p>
+            <p><%=time_ago_in_words @post.created_at %> ago</p>
 
-    <% if current_user == @user %>
+            <% if current_user == @post.user %>
 
-    <p><%= link_to "Edit", edit_post_path(@post) %> <%= link_to "Delete", post_path(@post), method: "delete" %></p>
+            <p>
+                <%= link_to "Edit", edit_post_path(@post), class: "float-left" %> 
+                <%= link_to "Delete", post_path(@post), {class: "float-right", method: "delete"} %>
+            </p>
 
-    <% end %>
-</ul>
-</div>
+            <% end %>
+        </div>
+    </div>
+ </div>

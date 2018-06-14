@@ -1,32 +1,65 @@
+<% if params[:q] %>
+  <h1>
+    <%= @posts.length %> Search Results for "<%=params[:q]%>" 
+  </h1> 
+<% else %>
 
- <h1>Feed</h1>
+<div class="btn-group dropright btn-feed">
+<h1 class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <% if @header %>
+      <%= @header %>
+      <% else %>
+        Feed
+      <% end %>
+  </h1>
 
-  <% @posts.reverse.in_groups_of(3).each_with_index do |row, i|  %>
+
+  <div class="dropdown-menu text-dark" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="?sort_by=tag">Alphabetical</a>
+    <a class="dropdown-item" href="?sort_by=created_at">Most Recent</a>
+    <a class="dropdown-item" href="?sort_by=random">Random</a>
+  </div>
+</div>
+<% end %>
+
+  <% @posts.in_groups_of(3).each_with_index do |row, i|  %>
 
     <div class="row mb-3">
       <div class="col-md-4">
-      <h4><%= link_to(row[0].user.name, user_path(row[0].user.id))%></h4><p> <%=time_ago_in_words row[0].created_at %> ago</p>
-        <%= row[0].audio.html_safe %>
-      <p><%= link_to(row[0].caption, post_path(row[0])) %></p>
+        <div class="card" style="width: 342px;">
+          <div class="card-body">
+            <h5><%= link_to(row[0].user.name, user_path(row[0].user.id))%></h5>
+            <%= row[0].audio.html_safe %>
+            <p><%= link_to "#{time_ago_in_words(row[0].created_at)} ago", post_path(row[0]) %></p>
+          </div>
+        </div>
       </div>
 
-      <% if row[1] %>
+    <% if row[1] %>
       <div class="col-md-4">
-      <h4><%= link_to(row[1].user.name, user_path(row[1].user.id))%></h4><p> <%=time_ago_in_words row[1].created_at %> ago</p>
-        <%= row[1].audio.html_safe %>
-      <p><%= link_to(row[1].caption, post_path(row[1])) %></p>
+        <div class="card" style="width: 342px;">
+          <div class="card-body">
+            <h5><%= link_to(row[1].user.name, user_path(row[1].user.id))%></h5>
+            <%= row[1].audio.html_safe %>
+            <p><%= link_to "#{time_ago_in_words(row[1].created_at)} ago", post_path(row[1]) %></p>
+          </div>
+        </div>
       </div>
-      <% end %>
+    <% end %>
 
-      <% if row[2] %>
+    <% if row[2] %>
       <div class="col-md-4">
-      <h4><%= link_to(row[2].user.name, user_path(row[2].user.id))%></h4><p> <%=time_ago_in_words row[2].created_at %> ago</p>
-      <%= row[2].audio.html_safe %>
-      <p><%= link_to(row[2].caption, post_path(row[2])) %></p>
+        <div class="card" style="width: 342px;">
+          <div class="card-body">
+            <h5><%= link_to(row[2].user.name, user_path(row[2].user.id))%></h5>
+            <%= row[2].audio.html_safe %>
+            <p><%= link_to "#{time_ago_in_words(row[2].created_at)} ago", post_path(row[2]) %></p>
+          </div>
+        </div>
       </div>
-      <% end %>
+    <% end %>
 
-    </div>
-  <% end %>
+  </div>
+<% end %>
 
 

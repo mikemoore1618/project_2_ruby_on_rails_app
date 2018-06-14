@@ -3,7 +3,20 @@ class PostsController < ApplicationController
   before_action :verify_user, only: [:edit, :update, :destroy]
 
   def index
-    @posts = Post.all
+    if params[:q]
+      @posts = Post.where("tag ILIKE ?", "%#{params[:q]}%")
+    elsif params[:sort_by] == 'tag'
+      @posts = Post.order('tag')
+      @header = "Alphabetical"
+    elsif params[:sort_by] == 'created_at'
+      @posts = Post.order('created_at DESC')
+      @header = "Most Recent"
+    elsif params[:sort_by] == 'random'
+      @posts = Post.all.shuffle
+      @header = "Random"
+    else
+      @posts = Post.all
+    end
   end
 
   def show
@@ -18,7 +31,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new
     @post.audio = params[:post][:audio]
-    @post.caption = params[:post][:caption]
+    @post.tag = params[:post][:tag]
     @post.user_id = current_user.id
     if @post.save
       redirect_to user_path(current_user.id)
@@ -34,7 +47,7 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     @post.audio = params[:post][:audio]
-    @post.caption = params[:post][:caption]
+    @post.tag = params[:post][:tag]
     @post.save
     redirect_to root_path
   end
