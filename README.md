@@ -1,6 +1,5 @@
+![alt text](https://i.imgur.com/PuF8jvJ.png)
 
-
-    - A screenshot of the finished application ([Taking screenshots on a Mac](https://support.apple.com/en-us/HT201361))
     - An introduction to the application
       - What is it?
       - What problem(s) does it aim to solve?
