@@ -4,7 +4,7 @@ https://peaceful-sea-29225.herokuapp.com/
 
 This app aims solve to Spotify's clunky "Friend Activity" section and make it easier to check out what your friends are listening to and post songs youre currently groovin' too!
 
-Tech:
+# Tech
 
 * Ruby on Rails (Ruby version 2.5.0)
 
@@ -21,7 +21,7 @@ Tech:
 * Animate.css
     
     
-Installation/Startup Instructions:
+# Installation/Startup
     
 * The first step is to download this directory from Github to a local directory on your computer.
 
@@ -46,14 +46,16 @@ Installation/Startup Instructions:
 
 * Start using/updating the app to help pets and people in your area!
 
+# Wire Frame
+
 ![alt text](https://i.imgur.com/ccm0WQJ.jpg)
 
-Back log:
+# Back log
 
 - Comments on Posts from Users with full CRUD
 - Likes on Posts from Users with Create and Delete
 - Sponsorship and 6 fig salary from Spotify
 
-Trello:
+# Trello
 
 https://trello.com/b/Hm4YN7rd/wdi-58-project-2-full-stack-ruby-app#
