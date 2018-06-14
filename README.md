@@ -1,9 +1,6 @@
 ![alt text](https://i.imgur.com/PuF8jvJ.png)
 
-    - An introduction to the application
-      - What is it?
-      - What problem(s) does it aim to solve?
-      
+This app aims solve to Spotify's clunky "Friend Activity" section and make it easier to check out what your friends are listening to and post songs youre currently groovin' too!
 Tech:
 
 * Ruby on Rails (Ruby version 2.5.0)
