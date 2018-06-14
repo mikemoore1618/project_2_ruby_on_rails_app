@@ -52,9 +52,9 @@ This app aims solve to Spotify's clunky "Friend Activity" section and make it ea
 
 # Back log
 
-- Comments on Posts from Users with full CRUD
-- Likes on Posts from Users with Create and Delete
-- Sponsorship and 6 fig salary from Spotify
+-  Create another Model for Comments on Posts from Users with full CRUD
+-  Implement functionality for Likes on Posts from Users with Create and Delete
+-  Gain ponsorship and a 6 figure salary from Spotify
 
 # Trello
 
