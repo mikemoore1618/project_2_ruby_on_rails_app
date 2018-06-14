@@ -1,24 +1,13 @@
-# README
+- A `readme.md` file at the root of the project's git repo with:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+    - A screenshot of the finished application ([Taking screenshots on a Mac](https://support.apple.com/en-us/HT201361))
+    - An introduction to the application
+      - What is it?
+      - What problem(s) does it aim to solve?
+    - Explanations of the technologies used.
+    - Installation/startup instructions (this will be a little more complicated than with project 1!). How can a potential employer run your code *locally* on their own machine?
+    - A [wireframe](https://en.wikipedia.org/wiki/Website_wireframe) of the initial idea. You could take a screenshot of a wireframe using [Gliffy](https://www.gliffy.com/), [Balsamiq](https://balsamiq.com/), or even just draw it on a napkin and snap a photo!
+    - An **ERD** (entity relationship diagram) for the data models in your app. The quickest way to get a nice looking ERD is to build one with [Gliffy](https://www.gliffy.com/), take a screenshot of it, and include the screenshot in your readme. But again, a napkin sketch works just as well!
+    - A **Backlog**: Descriptions of any **unsolved problems** or **major hurdles** you had to overcome.
+    - Take advantage of Markdown syntax in your `readme.md` using this [cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)!
+    - A link to your **publicly accessible** trello board, described below:
