@@ -14,7 +14,7 @@
   <% @posts.shuffle.in_groups_of(3).each_with_index do |row, i|  %>
 
     <div class="row mb-3">
-      <div class="col-md-4">
+      <div class="col-md-4 col-sm\12">
         <div class="card" style="width: 342px;">
           <div class="card-body">
             <h5><%= link_to(row[0].user.name, user_path(row[0].user.id))%></h5>
@@ -26,7 +26,7 @@
       </div>
 
     <% if row[1] %>
-      <div class="col-md-4">
+      <div class="col-md-4 col-sm\12">
         <div class="card" style="width: 342px;">
           <div class="card-body">
             <h5><%= link_to(row[1].user.name, user_path(row[1].user.id))%></h5>
@@ -39,7 +39,7 @@
     <% end %>
 
     <% if row[2] %>
-      <div class="col-md-4">
+      <div class="col-md-4 col-sm\12">
         <div class="card" style="width: 342px;">
           <div class="card-body">
             <h5><%= link_to(row[2].user.name, user_path(row[2].user.id))%></h5>
