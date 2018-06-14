@@ -51,6 +51,7 @@ Installation/Startup Instructions:
 Back log:
 
 - Comments on Posts from Users with full CRUD
-   
-   Trello:
+- Sponsorship and 6 fig salary from Spotify
+Trello:
+
 https://trello.com/b/Hm4YN7rd/wdi-58-project-2-full-stack-ruby-app#
