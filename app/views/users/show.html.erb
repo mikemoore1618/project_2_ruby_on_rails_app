@@ -40,7 +40,7 @@
         <div class="card" style="width: 342px;">
           <div class="card-body">
             <%= link_to(row[2].audio.html_safe, posts_path(row[2])) %>
-            <p><%= link_to "#{time_ago_in_words(row[0].created_at)} ago", post_path(row[0]) %></p>
+            <p><%= link_to "#{time_ago_in_words(row[2].created_at)} ago", post_path(row[2]) %></p>
             <% if current_user == @user%>
             <p>
               <a><%= link_to "Edit", edit_post_path(row[2].id) %> </a>

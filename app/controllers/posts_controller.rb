@@ -15,7 +15,7 @@ class PostsController < ApplicationController
       @posts = Post.all.shuffle
       @header = "Random"
     else
-      @posts = Post.all
+      @posts = Post.all.reverse
     end
   end
 
