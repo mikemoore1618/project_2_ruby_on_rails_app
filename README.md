@@ -56,7 +56,7 @@ This app aims solve to Spotify's clunky "Friend Activity" section and make it ea
 * Open a new tab on your browser and type in localhost:3000
     -(If you get an error or a different application, make sure you do not have a previous local server running in a separate terminal tab.)
 
-* Start using/updating the app to help pets and people in your area!
+* Start using!
 
 # Initial Idea
 
