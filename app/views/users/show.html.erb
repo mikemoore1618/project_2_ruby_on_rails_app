@@ -10,8 +10,8 @@
           <p><%= link_to "#{time_ago_in_words(row[0].created_at)} ago", post_path(row[0]) %></p>
         <% if current_user == @user%>
           <p>
-            <%= link_to "Edit", edit_post_path(row[0].id) %> 
-            <%= link_to "Delete", post_path(row[0].id), method: "delete" %>
+            <%= link_to "Edit", edit_post_path(row[0].id), class: "float-left" %> 
+            <%= link_to "Delete", post_path(row[0].id), {class: "float-right", method: "delete"} %>
           </p>
         <% end %>
       </div>
@@ -26,8 +26,8 @@
             <p><%= link_to "#{time_ago_in_words(row[1].created_at)} ago", post_path(row[1]) %></p>
             <% if current_user == @user %>
             <p>
-              <%= link_to "Edit", edit_post_path(@post), class: "float-left" %> 
-              <%= link_to "Delete", post_path(@post), {class: "float-right", method: "delete"} %>
+              <%= link_to "Edit", edit_post_path(row[1].id), class: "float-left" %> 
+              <%= link_to "Delete", post_path(row[1].id), {class: "float-right", method: "delete"}%>
             </p>
             <% end %>
           </div>
@@ -43,8 +43,9 @@
             <p><%= link_to "#{time_ago_in_words(row[2].created_at)} ago", post_path(row[2]) %></p>
             <% if current_user == @user%>
             <p>
-              <a><%= link_to "Edit", edit_post_path(row[2].id) %> </a>
-              <a class="right"><%= link_to "Delete", post_path(row[2].id), method: "delete" %></a>
+              <a><%= link_to "Edit", edit_post_path(row[2].id),class: "float-left" %> </a>
+              <a class="right"><%= link_to "Delete", post_path(row[2].id), {class: "float-right", method: "delete"}%>
+              </a>
             </p>
             <% end %>
           </div>
