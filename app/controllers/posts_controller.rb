@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   def index
     #search query
     if params[:q]
-      #display Search for " " h1
+      #display search results, .where is looking for where it finds similarities "ILIKE" in "tag" to search query"?" "I" is "case Insensitive".
       @posts = Post.where("tag ILIKE ?", "%#{params[:q]}%")
     elsif params[:sort_by] == 'tag'
       #sort by Alphabetical 
