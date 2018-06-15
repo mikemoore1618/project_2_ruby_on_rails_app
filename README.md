@@ -17,8 +17,6 @@ This app aims solve to Spotify's clunky "Friend Activity" section and make it ea
 * HTML
 
 * CSS/SASS
-
-* Animate.css
     
     
 # Installation/Startup
@@ -46,7 +44,7 @@ This app aims solve to Spotify's clunky "Friend Activity" section and make it ea
 
 * Start using/updating the app to help pets and people in your area!
 
-# Wire Frame
+# Initial Idea
 
 ![alt text](https://i.imgur.com/ccm0WQJ.jpg)
 

@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
   #restrict access
+  #verify who is logged in and only let person logged in edit or delte their own posts
   before_action :authorize, only: [:show, :edit, :update, :destroy]
   
   def index
@@ -36,18 +37,21 @@ class UsersController < ApplicationController
     @user.name = params[:user][:name]
     @user.email = params[:user][:email]
     @user.save
+     #take you back to home page
     redirect_to '/'
   end
 
   def destroy
     @user = User.find(params[:id])
     @user.destroy
+     #clears cookies
     session[:user_id] = nil
     redirect_to '/'
   end
 
   private
   def user_params
+     #need these params to match up in order to log in
     params.require(:user).permit(:name,:email,:password,:password_confirmation)
   end
 

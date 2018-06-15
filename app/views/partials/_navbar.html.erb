@@ -2,7 +2,6 @@
   <a class="navbar-brand">
     <%= link_to image_tag("https://i.imgur.com/LT1CSQd.png"), root_path, class: 'nav-link' %> 
   </a>
-  
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -17,38 +16,42 @@
           <%= current_user.name %>
         </a>
         <div class="dropdown-menu text-dark" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item"><%= link_to 'My Posts', user_path(current_user.id), class: 'nav-link' %></a>
+          <a class="dropdown-item"><%= link_to 'My Posts', user_path(current_user.id), class: 'nav-link' %>
+          </a>
 
         <div class="dropdown-divider"></div>
 
-        <a class="dropdown-item"> <%= link_to 'Edit Account', edit_user_path(current_user.id), class: 'nav-link' %></a>
+        <a class="dropdown-item"> <%= link_to 'Edit Account', edit_user_path(current_user.id), class: 'nav-link' %>
+        </a>
 
-        <a class="dropdown-item"> <%= link_to 'Delete Account', logout_path, method: 'delete', class: 'nav-link' %></a>
+        <a class="dropdown-item"> <%= link_to 'Delete Account', logout_path, method: 'delete', class: 'nav-link' %>
+        </a>
         </div>
       </li>
 
-    <li class="nav-item">
-      <%= link_to 'New Post', new_post_path, class: 'nav-link' %>
-    </li>
-    <li class="nav-item">
-      <%= link_to 'Log Out', logout_path, method: 'delete', class: 'nav-link' %>
-    </li>
+      <li class="nav-item">
+        <%= link_to 'New Post', new_post_path, class: 'nav-link' %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Log Out', logout_path, method: 'delete', class: 'nav-link' %>
+      </li>
 
     <% else %>
 
-    <li class="nav-item">
-      <%= link_to 'Sign Up', new_user_path, class: 'nav-link' %>
-    </li>
-    <li class="nav-item">
-      <%= link_to 'Sign In', new_session_path, class: 'nav-link' %>
-    </li>
+      <li class="nav-item">
+        <%= link_to 'Sign Up', new_user_path, class: 'nav-link' %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Sign In', new_session_path, class: 'nav-link' %>
+      </li>
 
   <% end %>
-  
     </ul>
+    
     <form class="form-inline my-2 my-lg-0" action="/">
       <input class="form-control mr-sm-2" name="q" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search
+      </button>
     </form>
   </div>
 </nav>

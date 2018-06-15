@@ -5,14 +5,11 @@
         <div class="card-body">
             <p><%= @post.audio.html_safe %></p>
             <p><%=time_ago_in_words @post.created_at %> ago</p>
-
             <% if current_user == @post.user %>
-
             <p>
                 <%= link_to "Edit", edit_post_path(@post), class: "float-left" %> 
                 <%= link_to "Delete", post_path(@post), {class: "float-right", method: "delete"} %>
             </p>
-
             <% end %>
         </div>
     </div>
