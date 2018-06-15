@@ -5,7 +5,6 @@ html {
 }
 
 body{
-    // background: linear-gradient(to right, red , yellow);
     background-image: url("https://i.imgur.com/fvVLP9j.png")!important;
     background-attachment: fixed;
     background-position: center;
@@ -72,6 +71,12 @@ iframe {
 
 iframe:hover {
     transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+    body {
+        background-image: linear-gradient(to bottom right, red , yellow)!important;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
