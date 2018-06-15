@@ -52,6 +52,7 @@ This app aims solve to Spotify's clunky "Friend Activity" section and make it ea
 
 # Back log
 
+-  Make app mobile responsive
 -  Create another Model for Comments on Posts from Users with full CRUD
 -  Implement functionality for Likes on Posts from Users with Create and Delete
 -  Gain ponsorship and a 6 figure salary from Spotify
