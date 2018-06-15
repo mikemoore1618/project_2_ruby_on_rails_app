@@ -123,16 +123,7 @@ h5:hover{
 
 }
 
-iframe {
-    transform: scale(1);
-    transition: all .4s;
-    padding-bottom: 15px;
-}
-
-iframe:hover {
-    transform: scale(1.05);
-}
-
+//#scalable
 @media (max-width: 700px) {
     body {
         background-image: linear-gradient(to bottom right, #0a2955 , #4f1236, #240b41)!important;
@@ -160,9 +151,18 @@ iframe:hover {
     margin-top: 50px;
 }
 
+//card animation:default size to 1, over .4 seconds
 .card {
+    transform: scale(1);
+    transition: all .4s;
+    padding-bottom: 15px;
     background-color: rgba($color: white, $alpha: 0.04);
     border: none;
+}
+
+// card animation: when hover, grow 5%
+.card:hover {
+    transform: scale(1.05);
 }
 
 .right {
