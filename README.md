@@ -1,5 +1,19 @@
 ![alt text](https://i.imgur.com/PuF8jvJ.png)
 
+![alt text](https://i.imgur.com/xBTQDhR.png)
+
+![alt text](https://i.imgur.com/zRPabgY.png)
+
+![alt text](https://i.imgur.com/rz320nF.png)
+
+![alt text](https://i.imgur.com/P0WZoVz.png)
+
+![alt text](https://i.imgur.com/SQIwnD7.png)
+
+![alt text](https://i.imgur.com/dViltTV.png)
+
+
+
 https://peaceful-sea-29225.herokuapp.com/
 
 This app aims solve to Spotify's clunky "Friend Activity" section and make it easier to check out what your friends are listening to and post songs youre currently groovin' too!
