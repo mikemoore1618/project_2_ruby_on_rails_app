@@ -31,6 +31,8 @@ This app aims solve to Spotify's clunky "Friend Activity" section and make it ea
 * HTML
 
 * CSS/SASS
+
+* Heroku
     
     
 # Installation/Startup
