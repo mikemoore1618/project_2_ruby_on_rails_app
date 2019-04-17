@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
 
     #return the current user (the user that's making a request at any given moment).
     def current_user
-        @current_user ||= User.find(session[:user_id]) if session[:user_id]
+        @current_user || = User.find(session[:user_id]) if session[:user_id]
     end
 
     #return a simple boolean (are they logged in? true or false).
